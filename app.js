@@ -25,7 +25,7 @@ app.use(routing);
 
 console.log(process.env.NODE_ENV)
 
-if(process.env.NODE_ENV === 'dev'){
+if(process.env.NODE_ENV === 'development'){
     app.use(errorHandler());
 }else {
     app.use((err, req, res, next) => {
