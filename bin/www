@@ -4,7 +4,7 @@ const http = require('http');
 const app = require('../app');
 const env = require(`../environment/${process.env.NODE_ENV}.js`)
 
-console.log(env)
+console.log(process.env.NODE_ENV)
 
 const httpServer = http.createServer((req, res) => {
     res.writeHead( 301, { Location: `https://${req.headers.host.split(':')[0]+'+'+env.porHttps}${req.url}` } );
