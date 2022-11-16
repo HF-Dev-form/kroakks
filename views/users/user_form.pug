@@ -2,7 +2,6 @@ extends ../layout.pug
 
 block content
     div(class="d-flex flex-row mx-auto my-2 justify-content-center")
-        div(class="profile-container")
             form(class="card my-3 mx-auto border-light border" method="post" action="/users/signup")
                 div(class="class-header ps-1 rounded p-2 m-2 text-center bg-primary text-white fsw-bolder") 
                         h3(class="card-title pt-1") Inscription
@@ -22,4 +21,4 @@ block content
                                 li(class="text-center text-danger fst-italic list-group-item m-0 p-0")= error     
 
                     div(class="w-100")
-                        input(type="submit" class="btn btn-primary my-2 ms-auto d-block rounded" value="Envoyer")
+                        input(type="submit" class="btn btn-sm btn-primary my-2 ms-auto d-block rounded" value="Envoyer")
