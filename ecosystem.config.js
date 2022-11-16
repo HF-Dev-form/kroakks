@@ -1,5 +1,6 @@
 module.exports = {
   apps : [{
+    name: 'kroakks',
     script: './bin/www',
     instances: 'max',
     autorestart: true,
