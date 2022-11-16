@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(routing);
 
-// console.log(process.env.NODE_ENV)
+console.log(process.env.NODE_ENV)
 
 if(process.env.NODE_ENV === 'dev'){
     app.use(errorHandler());
