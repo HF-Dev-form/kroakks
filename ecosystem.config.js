@@ -1,13 +1,13 @@
 module.exports = {
   apps : [{
     script: './bin/www',
-    instances: 1,
+    instances: 'max',
     autorestart: true,
     watch:true,
     env: {
       NODE_ENV: 'dev',
     },
-    env_prod: {
+    env_production: {
       NODE_ENV: 'prod',
     }
   }],
