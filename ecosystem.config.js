@@ -11,9 +11,6 @@ module.exports = {
     env_prod: {
       NODE_ENV: 'prod',
     }
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
   }],
 
 };
