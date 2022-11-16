@@ -7,11 +7,11 @@ const env = require(`../environment/${process.env.NODE_ENV}.js`)
 console.log(env)
 
 const httpServer = http.createServer((req, res) => {
-    res.writeHead( 301, { Location: `https://${req.headers.host}${req.url}` } );
+    res.writeHead( 301, { Location: `https://${req.headers.host.split(':')[0]+'+'+env.porHttps}${req.url}` } );
     res.end();
-}).listen(80);
+}).listen(env.porHttp);
 
 const httpsServer = https.createServer({
     key: fs.readFileSync(env.key),
     cert: fs.readFileSync(env.cert),
-}, app).listen(443);
+}, app).listen(env.porHttps);
