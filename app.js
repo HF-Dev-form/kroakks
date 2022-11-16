@@ -1,17 +1,19 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const morgan = require('morgan');
 const routing = require('./routes');
 const errorHandler = require('errorhandler');
+require('./database/index');
 
+const app = express();
+module.exports = app;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-module.exports = app;
 
-require('./database/index');
+
+
 require('./config/session');
 require('./config/passport');
 

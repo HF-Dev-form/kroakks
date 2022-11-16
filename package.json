@@ -4,8 +4,8 @@
   "description": "social network, chat, twitter like",
   "main": "app.js",
   "scripts": {
-    "start": "set NODE_ENV=dev && node ./bin/www",
-    "start:prod": "set NODE_ENV=prod && node ./bin/www",
+    "start": "set NODE_ENV=dev && nodemon ./bin/www",
+    "start_prod": "set NODE_ENV=prod && nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

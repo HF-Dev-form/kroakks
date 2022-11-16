@@ -2,14 +2,16 @@ const fs = require('fs');
 const https = require('https');
 const http = require('http');
 const app = require('../app');
-const env = require(`../env/prod`)
+const env = require(`../environment/prod`)
+
+console.log(env)
 
 const httpServer = http.createServer((req, res) => {
-    res.writeHead( 301, {Location: `https://${req.headers.host}${req.url}`} );
+    res.writeHead( 301, { Location: `https://${req.headers.host}${req.url}` } );
     res.end();
 }).listen(80);
 
-https.createServer({
+const httpsServer = https.createServer({
     key: fs.readFileSync(env.key),
     cert: fs.readFileSync(env.cert),
 }, app).listen(443);
