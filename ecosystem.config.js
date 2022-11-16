@@ -1,7 +1,6 @@
 module.exports = {
   apps : [{
     script: './bin/www',
-    mode: 'cluster',
     instances: 1,
     autorestart: true,
     watch:true,
