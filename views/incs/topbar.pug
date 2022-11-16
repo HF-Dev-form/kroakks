@@ -1,0 +1,17 @@
+navbar(class="navbar navbar-expand-lg navbar-light bg-white navbar-bottom-border")
+    a(class="navbar-brand btn btn-sm" href="/")
+        img(src="/images/croater2.png", width="60" class="bg-white rounded-circle ms-2 img-fluid" )
+    button(class="navbar-toggler")
+        span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse")
+        ul(class="navbar-nav ms-auto fw-bolder fs-5")
+            if isAuthenticated   
+                li(class="nav-item active")
+                    a(class="nav-link btn btn-sm text-white bg-primary rounded" href="/messages/new") Kroakk+
+                li(class="nav-item active")    
+                    a(class="nav-link text-primary rounded" href="/auth/signout") Deconnexion
+            else        
+                li(class="nav-item")
+                    a(class="nav-link text-primary rounded" href="/auth/signin/form") Connexion       
+                li(class="nav-item")
+                    a(class="nav-link text-primary rounded" href="/users/signup/form") Inscription          

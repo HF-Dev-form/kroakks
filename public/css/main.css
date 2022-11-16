@@ -1,0 +1,22 @@
+body{
+    background-color: #f8f9fa !important;
+}
+
+.navbar-bottom-border{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.content{
+    max-width: 1000px;
+}
+
+.profile-container{
+    width: 30%;
+    max-width: 300px;
+    color:#657786;
+}
+
+.default-profile-img{
+    max-height: 100px;
+    
+}

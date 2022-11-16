@@ -1,0 +1,7 @@
+if messages
+  each message in messages
+      div(class="card shadow-sm fs-4")
+        div(class="card-body border border-top-0 p-2")
+          div(class="card-text")= message.content
+          button(class="btn btn-sm btn-danger mt-2 px-2 py-0 float-end rounded" msg-id=message._id) x
+          a(href="/messages/edit/" + message.id class="btn btn-sm btn-success me-1 mt-2 px-2 py-0 float-end rounded" msg-id=message._id) E

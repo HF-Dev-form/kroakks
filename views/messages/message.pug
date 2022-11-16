@@ -1,0 +1,8 @@
+extends ../layout.pug
+
+block content
+    script(src="/scripts/messages/message.js") 
+    div(class="d-flex flex-row mx-auto my-2")
+        include ../incs/profile.pug
+        div(class="flex-fill d-flex flex-column px-3" id="message-list-container")
+            include messages_list.pug  

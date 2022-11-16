@@ -1,0 +1,16 @@
+script(src="/scripts/profile.js") 
+div(class="profile-container bg-white me-2 d-flex flex-column" style="min-height: 70vh;")
+    form(class="d-flex flex-row justify-content-center align-items-center p-2" id="avatar-form" method="post" enctype="multipart/form-data" action="/users/update/image")
+        input(type="file" name="avatar-profile" id="avatar-profile" class="d-none")
+        img(src= currentUser.avatar class="img-fluid default-profile-img" id="img-profile")
+    div(class="d-flex flex-row justify-content-center align-items-center mt-2")
+        p(class="text-card text-center")= `${currentUser.username} (${currentUser.local.email})`
+    div(class="d-flex flex-row text-center justify-content-center align-items-center w-100")
+        div(class="flex-fill")
+            p(class="d-flex flex-column")
+                strong(class="fsw-bolder") Kroakks
+                span(class="text-info")= messages.length   
+        div(class="flex-fill")
+            p(class="d-flex flex-column")
+                strong(class="fsw-bolder") Abonnement      
+                span(class="text-info")  23 
